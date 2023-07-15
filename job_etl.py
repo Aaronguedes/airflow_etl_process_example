@@ -15,10 +15,10 @@ dag = DAG('data_processing', default_args=default_args, schedule_interval='@dail
 
 
 def define_checkpoint():
-    if not os.path.exists('/home/projeto_bix/checkpoint.txt'):
+    if not os.path.exists('/home/projeto/checkpoint.txt'):
         checkpoint = 0
     else:
-        with open('/home/projeto_bix/checkpoint.txt') as f:
+        with open('/home/projeto/checkpoint.txt') as f:
             checkpoint = f.read()
     return checkpoint
 
@@ -26,7 +26,7 @@ checkpoint = define_checkpoint()
 
 
 def create_or_replace_txt_file(checkpoint):
-    file_path = '/home/projeto_bix/checkpoint.txt'
+    file_path = '/home/projeto/checkpoint.txt'
     content = str(checkpoint)
     with open(file_path, 'w') as file:
         file.write(content)
@@ -74,7 +74,7 @@ def extract_parquet_data():
     Invokes download_parquet_file() func and extracts data from parquet file,
     then saves it in a pandas df and renames the id column to id_categoria
     '''
-    url = 'https://storage.googleapis.com/challenge_junior/categoria.parquet'
+    url = 'put here the url for parquet file'
     filename = 'categoria.parquet'
     download_parquet_file(url, filename)
 
@@ -90,7 +90,7 @@ def extract_api_data(id_array):
     Consumes an array of unique id_funcionario to request the name of each employee from the API
     Returns a dictionary with the employee names and their corresponding ids
     '''
-    base_url = "https://us-central1-bix-tecnologia-prd.cloudfunctions.net/api_challenge_junior?id="
+    base_url = "api_url?id="
     api_list = []
 
     for id in id_array:
