@@ -6,6 +6,8 @@ This repository contains an ETL (Extract, Transform, Load) project that aims to 
 
 This is a prototype of a real project that uses dummy data to exemplify how to perform ETL using Airflow.
 
+Check ```job_etl.py``` to see the airflow DAG
+
 ## Project Requirements
 
 The ETL process involves the following data sources:
@@ -168,4 +170,4 @@ FROM venda_cat_func_date;
 
 Final Result:
 
-![query](data_sample.jpeg)
+![query](data_sample.png)
