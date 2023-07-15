@@ -1,9 +1,10 @@
-# etl_process
 
 
 # ETL Project Documentation
 
 This repository contains an ETL (Extract, Transform, Load) project that aims to process data from three different sources and load it into a data warehouse. The project utilizes Python, SQL, and the Airflow pipeline orchestrator.
+
+This is a prototype of a real project that uses dummy data to exemplify how to perform ETL using Airflow.
 
 ## Project Requirements
 
