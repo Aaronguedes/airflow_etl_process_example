@@ -79,7 +79,7 @@ CREATE TABLE dw_projeto.calendario (
     ano INT,
     bimestre INT
 );
-
+```
 ## Solution
 
 ![Solution Overview](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b6d29c85-d894-4866-b6ee-4cf6e1a738d9/Untitled.png)
