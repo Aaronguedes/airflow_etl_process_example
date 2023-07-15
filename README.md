@@ -45,7 +45,7 @@ DBeaver was used as the SQL IDE.
 
 The data warehouse follows a star schema modeling approach. The entity-relationship diagram (ERD) for the data warehouse is as follows:
 
-![ERD](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8297560f-76b9-42d5-8e87-80111ea7df45/Untitled.png)
+![ERD](dw_modeling.jpeg)
 
 The fact table is named **vendas** (sales), and the dimensional tables are **categoria** (category), **funcionarios** (employees), and **calendario** (calendar).
 
@@ -82,7 +82,7 @@ CREATE TABLE dw_projeto.calendario (
 ```
 ## Solution Architecture
 
-![Solution Overview](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b6d29c85-d894-4866-b6ee-4cf6e1a738d9/Untitled.png)
+![Solution Overview](solution.png)
 
 ### Task 1: define_checkpoint
 
@@ -164,3 +164,8 @@ SELECT id_venda, venda, id_func, funcionario,
        id_cat, categoria, "data", dia, mes,
        ano, bimestre
 FROM venda_cat_func_date;
+```
+
+Final Result:
+
+![query](data_sample.jpeg)
